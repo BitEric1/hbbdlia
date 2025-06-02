@@ -16,14 +16,14 @@ import {
     X,
 } from "lucide-react"; // Đã bỏ Maximize2
 import Confetti from "react-confetti";
+const withBase = (path) => `${import.meta.env.BASE_URL}${path}`;
 
-const spyMusicURL = "/sound/happy.mp3";
-const partyMusicURL =
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3";
+const spyMusicURL = "sound/happy.mp3";
+const partyMusicURL = "sound/Song.mp3";
 
 const FRIEND_NAME = "Giàng Mí Lía";
 const YOUR_NAME = "Bit Eric";
-const ACTIVATION_MODAL_IMAGE_URL = "/assets/liag.jpg";
+const ACTIVATION_MODAL_IMAGE_URL = "imgs/liag.jpg";
 const ACTIVATION_MODAL_MESSAGE = `Gửi Mật vụ ${FRIEND_NAME} siêu cấp đẹp trai và tài năng! Chúc mừng sinh nhật đồng chí! Hôm nay là ngày để đồng chí 'xõa' hết mình, 'phá án' mọi cuộc vui và 'bắt giữ' thật nhiều khoảnh khắc đáng nhớ. Tổng Chỉ Huy và toàn thể anh em luôn tự hào về đồng chí! Happy Birthday!`;
 
 const profileData = {
@@ -56,17 +56,17 @@ const profileData = {
 const evidencePhotos = [
     {
         id: 1,
-        src: `/imgs/liag.jpg`,
+        src: `${withBase("imgs/liag.jpg")}`,
         caption: "Đặc vụ siêu cấp đẹp trai'",
     },
     {
         id: 2,
-        src: `/imgs/pic2.jpg`,
+        src: `imgs/pic2.jpg`,
         caption: "Hiện trường vụ 'Cười Bể Bụng'",
     },
     {
         id: 3,
-        src: `/imgs/pic3.jpg`,
+        src: `imgs/pic3.jpg`,
         caption: "Tang vật: Nụ cười rạng rỡ",
     },
 ];
@@ -206,7 +206,7 @@ const SplashScreen = ({ onLoaded }) => {
 const MissionHeader = () => (
     <header className="py-8 text-center bg-slate-800/70 backdrop-blur-md shadow-2xl rounded-b-xl sticky top-0 z-[1000] animate-fadeInDown">
         <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-2xl font-bold text-sky-400">
+            <h1 className="text-4xl md:text-5xl font-bold text-sky-400">
                 <Shield className="inline-block w-10 h-10 mr-3 mb-1 text-sky-300" />
                 CHIẾN DỊCH SINH NHẬT TỐI MẬT
             </h1>
